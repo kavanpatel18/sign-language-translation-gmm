@@ -1,36 +1,51 @@
-# Sign Language Translation using Gaussian Mixture Models
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=160&section=header&text=Sign%20Language%20Translation&fontSize=36&fontColor=fff&animation=twinkling&desc=GMM-powered%20ASL%20Recognition%20System&descSize=16&descAlignY=75" width="100%"/>
 
-Real-time ASL alphabet recognition using webcam hand landmarks and Gaussian Mixture Models.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-## Pipeline
+</div>
 
-1. Capture labeled hand-landmark data.
-2. Normalize and engineer landmark features.
-3. Train a class-conditional GMM.
-4. Map GMM components to alphabet classes.
-5. Run live webcam inference.
+## 🤟 Overview
 
-## Tech stack
+A real-time **American Sign Language (ASL) recognition system** using **Gaussian Mixture Models (GMM)** to classify hand gestures into alphabet characters. Bridges communication barriers using classical machine learning.
 
-Python, OpenCV, MediaPipe, NumPy, pandas, scikit-learn, joblib, Gaussian Mixture Models.
+## ✨ Features
 
-## Repository
+- 📸 **Real-time hand gesture capture** via webcam using OpenCV
+- 🧠 **GMM-based classification** trained on ASL alphabet dataset
+- 🗂️ **Data collection pipeline** — custom image collection notebook
+- 🚀 **Deployment-ready** — packaged model with deployment notebook
+- 🎭 **Bonus**: Fun hand + face detector notebook
 
-- `model_sign_language_translator_2.ipynb` - feature processing, PCA, GMM training and evaluation
-- `gmm_model.pkl` - trained GMM artifact from the original project
-- `ASL_alphabets.xlsx` - landmark dataset used by the training notebook
-- Additional notebooks in the original project cover webcam collection and deployment.
+## 🏗️ Project Structure
 
-## Result
+| File | Description |
+|------|-------------|
+| data_collector_sign_language_translator_1.ipynb | Data collection pipeline |
+| model_sign_language_translator_2.ipynb | GMM model training |
+| deployment_sign_language_translator_3.ipynb | Model deployment & inference |
+| gmm_model.pkl | Pre-trained GMM model |
+| ASL_alphabets.xlsx | Dataset labels |
 
-The supplied training notebook records **96.48% accuracy** on its filtered test evaluation.
+## 🚀 Quick Start
 
-## Run
+`ash
+git clone https://github.com/kavanpatel18/sign-language-translation-gmm
+cd sign-language-translation-gmm
+pip install opencv-python scikit-learn numpy pandas
+jupyter notebook deployment_sign_language_translator_3.ipynb
+`
 
-```bash
-pip install opencv-python mediapipe numpy pandas scikit-learn joblib openpyxl
-```
+## 🛠️ Tech Stack
 
-Then open the training notebook in Jupyter or Google Colab.
+- **ML Model**: Gaussian Mixture Models (GMM)
+- **Computer Vision**: OpenCV
+- **Data Processing**: NumPy, Pandas
+- **Environment**: Jupyter Notebook
 
-This project recognizes a predefined alphabet vocabulary rather than continuous sign-language sentences.
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=80&section=footer&animation=twinkling" width="100%"/>
+</div>
